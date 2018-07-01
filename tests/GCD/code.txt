@@ -1,0 +1,13 @@
+pragma solidity ^0.4.21;
+contract Ballot{
+    int v1 = 50;
+    int v2 = 100;
+    function gcd(int n1, int n2) public  returns(int)
+    {
+        if (n2 != 0)
+          return gcd(n2, n1 % n2);
+        else 
+          return n1;
+    }
+    int result = gcd(45, 69);
+}

@@ -1,0 +1,12 @@
+pragma solidity ^0.4.21;
+
+contract A{
+    function sum(int a, int b) public returns(int){
+        return a+b;
+    }
+}
+
+contract Ballot{
+    A a = new A();
+    int p = 10;
+}

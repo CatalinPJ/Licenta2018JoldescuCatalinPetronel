@@ -1,0 +1,15 @@
+pragma solidity ^0.4.21;
+pragma experimental ABIEncoderV2;
+contract Ballot {
+    struct Test{
+        int a;
+        int b;
+        int c;
+    }
+    Test test_parameter = Test({a:13, b:223, c:454});
+    function struct_test(Test test) public returns (Test){
+        test.a = test.a * 2;
+        return test;
+    }
+    Test result = struct_test(test_parameter);
+}

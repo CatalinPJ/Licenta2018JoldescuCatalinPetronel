@@ -1,0 +1,10 @@
+pragma solidity ^0.4.21;
+contract Ballot{
+    mapping (address => uint) balances;
+    function updateBalances() public returns(uint){
+        balances[0] = 16;
+        balances[1] = 56;
+        return balances[0];
+    }
+    uint value = updateBalances();
+}

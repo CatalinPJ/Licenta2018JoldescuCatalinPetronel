@@ -1,0 +1,10 @@
+pragma solidity ^0.4.21;
+contract Ballot{
+    function fibo_recursive(int n) public  returns(int)
+    {
+        if(n<=1)
+            return n;
+        return fibo_recursive(n-1) + fibo_recursive(n-2);
+    }
+    int result = fibo_recursive(5);
+}

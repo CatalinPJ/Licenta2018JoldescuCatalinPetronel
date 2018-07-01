@@ -1,0 +1,15 @@
+pragma solidity ^0.4.21;
+contract Ballot {
+    function reversed(int n) public returns(int){
+        int reversedNumber = 0;
+        int remainder;
+        while(n != 0)
+        {
+            remainder = n%10;
+            reversedNumber = reversedNumber*10 + remainder;
+            n /= 10;
+        }
+    return reversedNumber;
+    }
+    int result = reversed(1032);
+}

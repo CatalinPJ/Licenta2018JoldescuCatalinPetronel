@@ -1,0 +1,16 @@
+pragma solidity ^0.4.21;
+contract Ballot {
+    struct Test{
+        int a;
+        int b;
+        int c;
+    }
+    function struct_test(int n) public returns (int){
+        Test t1;
+        t1.a = n;
+        t1.b = n*2;
+        t1.c = n*3;
+        return t1.a + t1.b + t1.c;
+    }
+    int result = struct_test(10);
+}

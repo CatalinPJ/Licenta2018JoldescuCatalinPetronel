@@ -1,0 +1,19 @@
+pragma solidity ^0.4.21;
+
+contract Ballot{
+    function is_palindrom(int n) public returns(bool)
+    {
+    	int n1;
+    	int d;
+    	int rn=0;
+    	n1=n;
+    	while(n>0)
+    	{
+    		d=n%10;
+    		rn=(rn*10)+d;
+    		n/=10;
+    	}
+    	return n1==rn;
+    }
+    bool result = is_palindrom(45654);
+}
